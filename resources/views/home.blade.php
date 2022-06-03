@@ -36,9 +36,9 @@
                             <td>{{ $rs['email'] }}</td>
                             <td>{{ $rs['telp'] }}</td>
                             <td>
-                                <a href="/pegawai/edit/{{ $rs['id'] }}">Edit</a>
+                                <a href="/rumahsakit/edit/{{ $rs['id'] }}">Edit</a>
                                 |
-                                <a href="/pegawai/hapus/{{ $rs['id'] }}">Hapus</a>
+                                <a href="/rumahsakit/hapus/{{ $rs['id'] }}">Hapus</a>
                             </td>
                         </tr>
                         @endforeach

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
 
+
 class HospitalController extends Controller
 {
     /**
@@ -15,6 +16,14 @@ class HospitalController extends Controller
     public function index()
     {
         //
+    }
+
+    // method untuk menampilkan view form tambah pegawai
+    public function tambah()
+    {
+
+        return view('tambah');
+
     }
 
     /**
@@ -33,9 +42,19 @@ class HospitalController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+    // method untuk insert data ke table pegawai
     public function store(Request $request)
     {
-        //
+        // insert data ke table pegawai
+        Hospital::insert([
+            'name' => $request->name,
+            'address' => $request->address,
+            'email' => $request->email,
+            'telp' => $request->telp
+        ]);
+        // alihkan halaman ke halaman pegawai
+        return redirect('/');
+
     }
 
     /**
